@@ -1,6 +1,6 @@
 ---
   - name: Add nginx repo
-    template:
+    ansible.builtin.template:
       src: nginx.repo.j2
       dest: /etc/yum.repos.d/nginx.repo
       owner: root
@@ -9,7 +9,7 @@
 
 
   - name: Install nginx
-    yum:
+    ansible.builtin.yum:
       name: nginx
       state: present
       update_cache: yes
