@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: true
+
+  tasks:
+    - name: Include ansible-role-nginx
+      include_role:
+        name: "devopscoder331.nginx"
